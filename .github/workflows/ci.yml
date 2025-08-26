@@ -24,6 +24,6 @@ jobs:
           pip install mkdocs mkdocs-material
 
       - name: Deploy with mkdocs gh-deploy
-        run: mkdocs gh-deploy --force --CNAME=ecnusc.eagle233.top
+        run: mkdocs gh-deploy --force
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
