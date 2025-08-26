@@ -1,5 +1,57 @@
 site_name: ECNU-SharedCources
-nav:
-  - Home: index.md
-  - About: about.md
-theme: readthedocs
+site_url: https://ecnusc.eagle233.top
+theme:
+  name: material # rtd-dropdown
+  favicon: img/favicon.ico
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - search.suggest
+    - search.highlight
+    - search.share
+
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.instant.preview
+    - navigation.tracking
+    - navigation.path
+    - navigation.top
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+      primary: custom
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+      primary: custom
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+      primary: custom
+
+plugins:
+  - search:
+      lang: zh
+  - gen_nav:
+      enabled: true
+
+extra:
+  homepage: https://ecnusc.eagle233.top
+
+extra_css:
+  - css/extra.css
+
+repo_url: https://github.com/Eagle233Fake/ECNU-SharedCourses
+repo_name: ECNU-SharedCourses
