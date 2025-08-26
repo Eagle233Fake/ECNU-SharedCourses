@@ -21,9 +21,9 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install mkdocs mkdocs-material mkdocs-gen-nav-plugin
+          pip install mkdocs mkdocs-material
 
       - name: Deploy with mkdocs gh-deploy
-        run: mkdocs gh-deploy --force
+        run: mkdocs gh-deploy --force --CNAME=ecnusc.eagle233.top
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

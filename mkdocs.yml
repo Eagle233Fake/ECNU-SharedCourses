@@ -44,8 +44,7 @@ theme:
 plugins:
   - search:
       lang: zh
-  - gen_nav:
-      enabled: true
+
 
 extra:
   homepage: https://ecnusc.eagle233.top
