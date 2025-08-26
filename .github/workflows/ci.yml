@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install mkdocs mkdocs-material
+          pip install mkdocs mkdocs-material mkdocs-gen-nav
 
       - name: Deploy with mkdocs gh-deploy
         run: mkdocs gh-deploy --force
