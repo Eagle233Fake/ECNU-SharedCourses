@@ -1,0 +1,29 @@
+name: Deploy MkDocs site
+
+on:
+  push:
+    branches: [ main ]   # main 分支有变动就触发
+  pull_request:
+    branches: [ main ]   # PR 合并到 main 也触发
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install mkdocs mkdocs-material
+
+      - name: Deploy with mkdocs gh-deploy
+        run: mkdocs gh-deploy --force
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
