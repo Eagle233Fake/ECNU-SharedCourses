@@ -17,6 +17,10 @@ theme:
     - navigation.tracking
     - navigation.path
     - navigation.top
+
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
@@ -45,7 +49,6 @@ plugins:
   - search:
       lang: zh
 
-
 extra:
   homepage: https://ecnusc.eagle233.top
 
@@ -54,3 +57,15 @@ extra_css:
 
 repo_url: https://github.com/Eagle233Fake/ECNU-SharedCourses
 repo_name: ECNU-SharedCourses
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
